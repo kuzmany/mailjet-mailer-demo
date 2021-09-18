@@ -9,7 +9,7 @@ $email = (new \Symfony\Component\Mime\Email())
     ->subject('Test email with quotes in name')
     ->html('<p>Hello!</p>');
 
-$transport =  \Symfony\Component\Mailer\Transport::fromDsn('smtp://user:passowrd@host:port'); ;
+$transport =  \Symfony\Component\Mailer\Transport::fromDsn('smtp://user:password@host:port'); ;
 $mailer = new \Symfony\Component\Mailer\Mailer($transport);
 
 $mailer->send($email);
